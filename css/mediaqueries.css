@@ -1,0 +1,331 @@
+/* media queries will not take html default font size(i.e 62.5%) 
+1rem=1em=16px
+(use em cause rem has some bugs in a few browsers in media queries) */
+
+/* for smaller desktop
+84em =1344px */
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120em;
+  }
+  .primary-heading {
+    font-size: 4.4em;
+  }
+}
+/* for Landscape mode Tablet
+1200/16 = 75
+75em= 1200px */
+
+@media (max-width: 75em) {
+  html {
+    /* 9px/16=0.5625 */
+    font-size: 56.25%;
+  }
+  .primary-heading {
+    font-size: 4.4em;
+  }
+  .main .nav-list {
+    gap: 2.8em;
+  }
+  /* .header{
+  max-width:120em
+} */
+  .section-pricing {
+    padding: 4.4rem 2rem 2rem 2rem;
+  }
+}
+
+/* for Tablets
+8px/16 = 50%font
+62em= 992px */
+
+@media (max-width: 62em) {
+  html {
+    font-size: 50%;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 1rem 8rem;
+    gap: 5rem;
+    /* position:relative; */
+  }
+  .hero-img {
+    width: 75%;
+    /* position: absolute; */
+    margin-left: 12%;
+  }
+
+  .primary-heading {
+    font-size: 3.6rem;
+  }
+  .hero-img,
+  .hero-text {
+    text-align: center;
+  }
+  .customers,
+  .delivered-meal {
+    justify-content: center;
+    margin-top: 4rem;
+  }
+  .featured-in-logo {
+    height: 2.4rem;
+    /* width:10%; */
+    filter: brightness(0);
+    opacity: 60%;
+  }
+  .section-pricing .container {
+    gap: 5rem;
+  }
+  .pricing-plan {
+    width: 80%;
+  }
+  .cta {
+    grid-template-columns: 3fr 2fr;
+  }
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+  .cta .form-btn {
+    margin-top: 1.8rem;
+    padding: 1.5rem;
+    font-size: 2rem;
+  }
+  .nav-btn {
+    display: block;
+    z-index:1000;
+  }
+  .nav {
+    background-color: rgba(255, 255, 255, 0.837);
+    -webkit-backdrop-filter: blur(5px);
+   backdrop-filter: blur(5px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    transform:translateX(100%);
+
+    /* display:none ->allows no transition so we dont use this */
+    transition: all 0.3s ease-in;
+
+    /* 1)hide visually */
+    opacity: 0;
+    /* 2)inaccessible for mouse nd keyboard */
+    pointer-events: none;
+    /* 3)hide from screen readers */
+    visibility: none;
+    /*     
+    display:block will do all three (i.e completely remove) .opacity will just hide.so 2 more step are done  */
+  }
+  .nav-list,
+  .nav-link {
+    font-size: 4.2rem !important;
+
+    text-align: center;
+  }
+
+ .nav-CTA:link,.nav-CTA:visited {
+    padding: 15px 20px !important;
+    display: inline-block;
+   
+  }
+ 
+ 
+  
+  .nav-list {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .nav-open .nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform:translateX(0);
+  
+  }
+  .nav-open .nav-icon[name="close-outline"] {
+    display: block;
+  }
+  .nav-open .nav-icon[name="menu-outline"] {
+    display: none;
+  }
+
+}
+/* max-width: 700px */
+@media (max-width:43em){
+  .featured-in-logo {
+    height: 2rem;
+    
+  }
+  
+  .grid--3--cols,.grid--4--cols{
+    grid-template-columns: repeat(2, 1fr);
+
+
+  }
+  .diet{
+    /* grid spans from one end to other end(-1) */
+    grid-column:1 / -1;
+    justify-self:center;
+
+  }
+  .pricing-plan{
+    width:100%
+  }
+ 
+  .grid--footer{
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr 1fr;
+    /* gap:2rem; */
+
+  }
+  .nav-col{
+    grid-row:1;
+    grid-column:span 2;
+    margin-bottom:3.2rem;
+    
+    
+  }
+  /* .nav-col.company{
+ grid-column:1/-4;
+  } */
+  .logo-cols,.Address-cols{
+    grid-column:span 3;
+
+  } 
+
+}
+
+/* 544px Mobile Phones*/
+@media (max-width:34em){
+  .grid{
+    row-gap:4.8em;
+  }
+  .grid--2--cols ,  .grid--3--cols,
+  .grid--4--cols{
+    grid-template-columns:1fr ;
+}
+.hero{
+  padding:0 3.2em;
+}
+/* .section-hero{
+  padding:2.4em 0 6.4em 0;
+} */
+.btn,
+.btn:link,
+.btn:visited{
+  padding: 1.4em 1.4em;
+
+}
+.hero-img{
+  width:90%;
+  margin-left: 5%;
+}
+.featured-in-logo{
+  height:1.1em
+}
+.steps-img-box:nth-child(2){
+  grid-row:1;
+
+}
+.steps-img-box:nth-child(6){
+  grid-row:5;
+
+}
+.steps-img-box{
+  transform:translateY(1.8em);
+}
+.steps-img{
+
+  height:30rem;
+
+}
+.step-num{
+  margin-bottom:0;
+}
+.section-meals{
+  padding:2rem;
+}
+.cta{
+  grid-template-columns:1fr;
+}
+.cta-img-box{
+  grid-row:1;
+  height:35em;
+
+}
+}
+/* .cta-text-box{
+  padding: 3.2em; 
+
+} */
+ 
+
+/* 01 Typography 
+ SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+
+.no-flexbox-gap .nav-list li:not(:last-child) {
+  margin-right: 3.4rem;
+}
+
+
+
+.no-flexbox-gap .grid--3--cols{
+  margin-right: 6rem;
+}
+
+.no-flexbox-gap .meal-attributes:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.no-flexbox-gap .meal-icon {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .grid--footer:not(:last-child) {
+  margin-bottom: 4rem;
+}
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+  margin-bottom: 1.4rem;
+}
+
+
+
+.no-flexbox-gap .social-links li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+  margin-bottom: 1.4rem;
+}
+
+@media (max-width: 75em) {
+  .no-flexbox-gap .main .nav-list li:not(:last-child) {
+    margin-right: 2.8rem;
+  }
+}
+
+@media (max-width: 62em) {
+  .no-flexbox-gap .nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .no-flexbox-gap .hero li:not(:last-child) {
+    margin-right:5rem;
+
+  }
+
+  .no-flexbox-gap .section-pricing .container li:not(:last-child) {
+    margin-right:5rem;
+
+  }
+}
