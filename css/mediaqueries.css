@@ -27,9 +27,7 @@
   .main .nav-list {
     gap: 2.8em;
   }
-  /* .header{
-  max-width:120em
-} */
+
   .section-pricing {
     padding: 4.4rem 2rem 2rem 2rem;
   }
@@ -47,11 +45,11 @@
     grid-template-columns: 1fr;
     padding: 1rem 8rem;
     gap: 5rem;
-    /* position:relative; */
+   
   }
   .hero-img {
     width: 75%;
-    /* position: absolute; */
+
     margin-left: 12%;
   }
 
@@ -69,7 +67,7 @@
   }
   .featured-in-logo {
     height: 2.4rem;
-    /* width:10%; */
+
     filter: brightness(0);
     opacity: 60%;
   }
@@ -180,7 +178,7 @@
  
   .grid--footer{
     grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr 1fr;
-    /* gap:2rem; */
+
 
   }
   .nav-col{
@@ -190,9 +188,7 @@
     
     
   }
-  /* .nav-col.company{
- grid-column:1/-4;
-  } */
+
   .logo-cols,.Address-cols{
     grid-column:span 3;
 
@@ -212,9 +208,7 @@
 .hero{
   padding:0 3.2em;
 }
-/* .section-hero{
-  padding:2.4em 0 6.4em 0;
-} */
+
 .btn,
 .btn:link,
 .btn:visited{
@@ -259,18 +253,8 @@
 
 }
 }
-/* .cta-text-box{
-  padding: 3.2em; 
 
-} */
- 
 
-/* 01 Typography 
- SPACING SYSTEM (px)
-      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-
-FONT SIZE SYSTEM (px)
-      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
 
 
 .no-flexbox-gap .nav-list li:not(:last-child) {
